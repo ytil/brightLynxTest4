@@ -1,0 +1,72 @@
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.table-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 480px;
+  height: 480px;
+  border: 1px solid black;
+}
+
+#game-board {
+  border-collapse: collapse;
+
+  tr:nth-of-type(odd) td:nth-of-type(even) {
+    background-color: black;
+  }
+
+  tr:nth-of-type(even) td:nth-of-type(odd) {
+    background-color: black;
+  }
+
+  td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+}
+
+.coords-top,
+.coords-bottom,
+.coords-left,
+.coords-right {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  color: gray;
+}
+
+.coords-top {
+  top: 5px;
+  left: 27px;
+  width: 425px;
+}
+
+.coords-bottom {
+  bottom: 3px;
+  left: 27px;
+  width: 425px;
+}
+
+.coords-right {
+  left: 10px;
+  top: 27px;
+  flex-direction: column;
+  height: 425px;
+}
+
+.coords-left {
+  right: 10px;
+  top: 27px;
+  flex-direction: column;
+  height: 425px;
+}
