@@ -25,14 +25,13 @@ class ChessCell {
     moves.push({ x: this.x - 2, y: this.y - 1 });
     moves.push({ x: this.x - 1, y: this.y - 2 });
     moves.push({ x: this.x + 1, y: this.y - 2 });
-    console.log(moves);
 
     const legalMoves = moves.filter((move) => {
       const { x, y } = move;
       return x >= 0 && x <= 7 && y >= 0 && y <= 7;
     });
 
-    return legalMoves.length > 0 ? legalMoves : [];
+    return legalMoves;
   }
 }
 
